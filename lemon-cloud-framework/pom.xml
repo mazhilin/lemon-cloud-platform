@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.lemon.cloud</groupId>
+        <artifactId>lemon-cloud-dependencies</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>com.lemon.cloud</groupId>
+    <artifactId>lemon-cloud-framework</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>lemon-cloud-framework</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <modules>
+        <module>lemon-cloud-common</module>
+        <module>lemon-cloud-core</module>
+        <module>lemon-cloud-hibernate</module>
+        <module>lemon-cloud-middleware</module>
+        <module>lemon-cloud-mybatis</module>
+        <module>lemon-cloud-mysql</module>
+        <module>lemon-cloud-profiler</module>
+        <module>lemon-cloud-redis</module>
+        <module>lemon-cloud-security</module>
+        <module>lemon-cloud-storage</module>
+        <module>lemon-cloud-swagger</module>
+        <module>lemon-cloud-transaction</module>
+    </modules>
+
+</project>
