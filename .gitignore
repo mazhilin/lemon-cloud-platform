@@ -353,3 +353,40 @@ gradle-app.setting
 
 *.rdb
 
+### STS ###
+.settings/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+bin/
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+
+### temp ignore ###
+*.cache
+*.diff
+*.patch
+*.tmp
+*.java~
+*.properties~
+*.xml~
+
+### system ignore ###
+.DS_Store
+Thumbs.db
+Servers
+.metadata
+upload
+gen_code
+
+### node ###
+node_modules
