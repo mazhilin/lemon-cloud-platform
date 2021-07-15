@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @author marklin
  */
 @RestController
-@RequestMapping(value = "/generator")
-public class GeneratorController {
+@RequestMapping(value = "/sourcecode")
+public class SourceCodeController {
 }
