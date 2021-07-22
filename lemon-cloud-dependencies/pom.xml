@@ -21,13 +21,16 @@
         <start-class>org.rainbow.spring.boot.Application</start-class>
         <spring-boot.version>2.5.2</spring-boot.version>
         <spring-framework.version>5.3.8</spring-framework.version>
+        <mybatis-plus.version>3.4.3</mybatis-plus.version>
+        <mysql.connector.version>8.0.23</mysql.connector.version>
+        <hutool.version>5.7.5</hutool.version>
+        <fastjson.version>1.2.76</fastjson.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -38,16 +41,53 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--mybatis plus extension,包含了mybatis plus core-->
+            <dependency>
+                <groupId>com.lemon.cloud</groupId>
+                <artifactId>lemon-cloud-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--mybatis-->
+            <dependency>
+                <groupId>com.lemon.cloud</groupId>
+                <artifactId>lemon-developer-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.lemon.cloud</groupId>
-                <artifactId>lemon-developer-model</artifactId>
-                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
