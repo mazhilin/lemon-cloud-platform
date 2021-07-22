@@ -1,4 +1,7 @@
 package com.lemon.cloud.common.controller;
 
-public class BaseSessionController extends BaseController{
+/**
+ * @author marklin
+ */
+public interface BaseSessionController extends Controller{
 }

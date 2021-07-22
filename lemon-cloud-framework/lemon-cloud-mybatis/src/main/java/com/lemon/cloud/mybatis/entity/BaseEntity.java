@@ -1,6 +1,5 @@
 package com.lemon.cloud.mybatis.entity;
 
-import com.lemon.cloud.core.serializer.ObjectSerializer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +8,7 @@ import java.time.LocalDateTime;
 /** @author marklin */
 @Setter
 @Getter
-public abstract class BaseEntity implements ObjectSerializer {
+public abstract class BaseEntity implements Entity {
   private static final long serialVersionUID = -5833444500136634795L;
   /** 主键id */
   private Long id;
