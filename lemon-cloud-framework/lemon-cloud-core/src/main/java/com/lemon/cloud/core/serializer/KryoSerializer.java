@@ -1,6 +1,6 @@
 package com.lemon.cloud.core.serializer;
 
-public class KryoSerializer implements ObjectSerializer{
+public class KryoSerializer implements MetadataSerializer{
     /**
      * Serialize byte [ ].
      *
@@ -22,7 +22,7 @@ public class KryoSerializer implements ObjectSerializer{
      * @throws TransactionException the transaction exception
      */
     @Override
-    public <T> T deSerialize(byte[] param, Class<T> clazz) throws Exception {
+    public <T> T deserialize(byte[] param, Class<T> clazz) throws Exception {
         return null;
     }
 }

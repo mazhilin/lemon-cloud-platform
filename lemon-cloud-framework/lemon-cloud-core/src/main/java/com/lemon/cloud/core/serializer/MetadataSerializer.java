@@ -1,7 +1,9 @@
 package com.lemon.cloud.core.serializer;
 
-public class HessianSerializer implements MetadataSerializer{
+import com.lemon.cloud.core.annotation.SerializerSpi;
 
+@SerializerSpi
+public interface MetadataSerializer {
     /**
      * Serialize byte [ ].
      *
@@ -9,21 +11,16 @@ public class HessianSerializer implements MetadataSerializer{
      * @return the byte [ ]
      * @throws TransactionException the transaction exception
      */
-    @Override
-    public byte[] serialize(Object obj) throws Exception {
-        return new byte[0];
-    }
+    byte[] serialize(Object obj) throws Exception;
 
     /**
      * De serialize t.
      *
+     * @param <T>   the type parameter
      * @param param the param
      * @param clazz the clazz
      * @return the t
      * @throws TransactionException the transaction exception
      */
-    @Override
-    public <T> T deserialize(byte[] param, Class<T> clazz) throws Exception {
-        return null;
-    }
+    <T> T deserialize(byte[] param, Class<T> clazz) throws Exception;
 }
